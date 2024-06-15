@@ -14,7 +14,7 @@ PRODUCT_NAME=
 PRODUCT_ID=
 THEME=
 
-WORK_DIR=
+WORK_DIR=/home/louis/build/pki
 
 PREFIX_DIR="/usr"
 INCLUDE_DIR="/usr/include"
