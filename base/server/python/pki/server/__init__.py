@@ -53,7 +53,7 @@ import pki.server.subsystem
 
 SYSCONFIG_DIR = '/etc/sysconfig'
 ETC_SYSTEMD_DIR = '/etc/systemd'
-LIB_SYSTEMD_DIR = '/lib/systemd'
+LIB_SYSTEMD_DIR = '/usr/lib/systemd'
 
 SUBSYSTEM_TYPES = ['ca', 'kra', 'ocsp', 'tks', 'tps']
 
@@ -77,7 +77,7 @@ class Tomcat(object):
     LIB_DIR = '/usr/share/java/tomcat'
     SHARE_DIR = '/usr/share/tomcat'
     EXECUTABLE = '/usr/sbin/tomcat'
-    UNIT_FILE = '/lib/systemd/system/tomcat@.service'
+    UNIT_FILE = '/usr/lib/systemd/system/tomcat@.service'
     SERVER_XML = CONF_DIR + '/server.xml'
     TOMCAT_CONF = CONF_DIR + '/tomcat.conf'
 

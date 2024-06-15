@@ -268,7 +268,7 @@ class PkiScriptlet(pkiscriptlet.AbstractBasePkiScriptlet):
             deployer.systemd.daemon_reload()
 
             # Link /etc/systemd/system/pki-tomcatd.target.wants/pki-tomcatd@<instance>.service
-            # to /lib/systemd/system/pki-tomcatd@.service
+            # to /usr/lib/systemd/system/pki-tomcatd@.service
             deployer.symlink.create(deployer.mdict['pki_systemd_service'],
                                     deployer.mdict['pki_systemd_service_link'])
 

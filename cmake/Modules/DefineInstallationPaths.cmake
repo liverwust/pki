@@ -105,7 +105,7 @@ if (UNIX)
       CACHE PATH "The /var install dir (default prefix/var)"
   )
   SET(SYSTEMD_LIB_INSTALL_DIR
-    "/lib/systemd/system"
+    "/usr/lib/systemd/system"
     CACHE PATH  "Base directory for systemd target and service files"
   )
   SET(SYSTEMD_ETC_INSTALL_DIR

@@ -194,7 +194,7 @@ class NuxwdogEnableCLI(pki.cli.CLI):
         new_systemd_link = os.path.join(
             '/etc/systemd/system/pki-tomcatd-nuxwdog.target.wants',
             new_systemd_unit_file)
-        new_systemd_source = '/lib/systemd/system/pki-tomcatd-nuxwdog@.service'
+        new_systemd_source = '/usr/lib/systemd/system/pki-tomcatd-nuxwdog@.service'
 
         if os.path.exists(old_systemd_link):
             os.unlink(old_systemd_link)
@@ -325,7 +325,7 @@ class NuxwdogDisableCLI(pki.cli.CLI):
         new_systemd_link = os.path.join(
             '/etc/systemd/system/pki-tomcatd.target.wants',
             new_systemd_unit_file)
-        new_systemd_source = '/lib/systemd/system/pki-tomcatd@.service'
+        new_systemd_source = '/usr/lib/systemd/system/pki-tomcatd@.service'
 
         if os.path.exists(old_systemd_link):
             os.unlink(old_systemd_link)
