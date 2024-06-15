@@ -1,5 +1,6 @@
 package com.netscape.cmscore.test;
 
+import java.security.Security;
 import java.security.SecureRandom;
 import java.security.cert.CertificateException;
 
@@ -29,6 +30,7 @@ public abstract class CMSBaseTestCase extends TestCase {
 
     @Override
     public final void setUp() throws Exception {
+        Security.addProvider(new org.mozilla.jss.netscape.security.provider.CMS());
         secureRandom = SecureRandom.getInstance("pkcs11prng", "Mozilla-JSS");
         dbSubsystem = new DBSubsystemStub();
         registry = new DBRegistry();
