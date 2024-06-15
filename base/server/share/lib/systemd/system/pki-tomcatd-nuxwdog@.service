@@ -19,8 +19,8 @@ ExecStartPre=/usr/sbin/pki-server upgrade %i
 ExecStartPre=/usr/sbin/pki-server migrate %i
 ExecStartPre=/usr/bin/pkidaemon start %i
 ExecStartPost=+/usr/bin/setfacl -x u:pkiuser /run/systemd/ask-password
-ExecStart=/usr/libexec/tomcat/server start
-ExecStop=/usr/libexec/tomcat/server stop
+ExecStart=/usr/lib/tomcat/server start
+ExecStop=/usr/lib/tomcat/server stop
 ExecStopPost=/usr/bin/pki-server-nuxwdog --clear
 
 KeyringMode=shared

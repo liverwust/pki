@@ -14,8 +14,8 @@ EnvironmentFile=/etc/pki/pki.conf
 ExecStartPre=/usr/sbin/pki-server upgrade %i
 ExecStartPre=/usr/sbin/pki-server migrate %i
 ExecStartPre=/usr/bin/pkidaemon start %i
-ExecStart=/usr/libexec/tomcat/server start
-ExecStop=/usr/libexec/tomcat/server stop
+ExecStart=/usr/lib/tomcat/server start
+ExecStop=/usr/lib/tomcat/server stop
 
 SuccessExitStatus=143
 User=pkiuser
